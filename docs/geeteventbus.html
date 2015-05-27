@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>geeteventbus Package &mdash; geeteventbus  documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="geeteventbus  documentation" href="index.html" />
+    <link rel="prev" title="Welcome to geeteventbus’s documentation!" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to geeteventbus’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">geeteventbus  documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="geeteventbus-package">
+<h1>geeteventbus Package<a class="headerlink" href="#geeteventbus-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-geeteventbus.event">
+<span id="event-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">event</span></tt> Module<a class="headerlink" href="#module-geeteventbus.event" title="Permalink to this headline">¶</a></h2>
+<p>Event super class</p>
+<dl class="class">
+<dt id="geeteventbus.event.event">
+<em class="property">class </em><tt class="descclassname">geeteventbus.event.</tt><tt class="descname">event</tt><big>(</big><em>topic</em>, <em>data</em>, <em>ordered=None</em><big>)</big><a class="reference internal" href="_modules/geeteventbus/event.html#event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geeteventbus.event.event" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="geeteventbus.event.event.get_data">
+<tt class="descname">get_data</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/geeteventbus/event.html#event.get_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geeteventbus.event.event.get_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the data associated with the event object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the data of the event object</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="geeteventbus.event.event.get_ordered">
+<tt class="descname">get_ordered</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/geeteventbus/event.html#event.get_ordered"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geeteventbus.event.event.get_ordered" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the event ordering field.</p>
+<p>Event ordering field may be none, specifying the events may get processed out of order</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the ordering field of the event object</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="geeteventbus.event.event.get_topic">
+<tt class="descname">get_topic</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/geeteventbus/event.html#event.get_topic"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geeteventbus.event.event.get_topic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the topic associated with the topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the topic of the event</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-geeteventbus.eventbus">
+<span id="eventbus-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">eventbus</span></tt> Module<a class="headerlink" href="#module-geeteventbus.eventbus" title="Permalink to this headline">¶</a></h2>
+<p>Main module implementing the event bus</p>
+<dl class="class">
+<dt id="geeteventbus.eventbus.eventbus">
+<em class="property">class </em><tt class="descclassname">geeteventbus.eventbus.</tt><tt class="descname">eventbus</tt><big>(</big><em>max_queued_event=10000</em>, <em>executor_count=8</em>, <em>synchronus=False</em>, <em>subscribers_thread_safe=True</em><big>)</big><a class="reference internal" href="_modules/geeteventbus/eventbus.html#eventbus"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geeteventbus.eventbus.eventbus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates an eventbus object</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>max_queued_event</strong> (<em>int</em>) &#8211; total number of un-ordered events queued.</li>
+<li><strong>executor_count</strong> (<em>int</em>) &#8211; number of threads to process the queued event by calling the
+corresponding subscribers.</li>
+<li><strong>synchronus</strong> (<em>bool</em>) &#8211; if the events are processed synchronously, i.e. if they are proccessed
+by subscribers on the same event submitting thread.</li>
+<li><strong>subscribers_thread_safe</strong> (<em>bool</em>) &#8211; if the subscribers can be invoked for processing multiple
+events simultaneously.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="geeteventbus.eventbus.eventbus.get_subscribers">
+<tt class="descname">get_subscribers</tt><big>(</big><em>topic</em><big>)</big><a class="reference internal" href="_modules/geeteventbus/eventbus.html#eventbus.get_subscribers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geeteventbus.eventbus.eventbus.get_subscribers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the list of subscribes currently registered for the topic.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geeteventbus.eventbus.eventbus.is_subscribed">
+<tt class="descname">is_subscribed</tt><big>(</big><em>consumer</em>, <em>topic</em><big>)</big><a class="reference internal" href="_modules/geeteventbus/eventbus.html#eventbus.is_subscribed"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geeteventbus.eventbus.eventbus.is_subscribed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a subscriber is a consumer for some topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if the consumer is subscribing to the topic</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="geeteventbus.eventbus.eventbus.post">
+<tt class="descname">post</tt><big>(</big><em>eventobj</em><big>)</big><a class="reference internal" href="_modules/geeteventbus/eventbus.html#eventbus.post"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geeteventbus.eventbus.eventbus.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>posts an event to the eventbus</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>eventobj</strong> &#8211; the event posted. It must be type of event class or its subclass.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">True if event is successfully postedb, False otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="geeteventbus.eventbus.eventbus.register_consumer">
+<tt class="descname">register_consumer</tt><big>(</big><em>consumer</em>, <em>topic</em><big>)</big><a class="reference internal" href="_modules/geeteventbus/eventbus.html#eventbus.register_consumer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geeteventbus.eventbus.eventbus.register_consumer" title="Permalink to this definition">¶</a></dt>
+<dd><p>registers a consumer to the eventbus that subscribes to a topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>consumer</strong> (<em>subscriber subclass</em>) &#8211; the subscriber object</li>
+<li><strong>topic</strong> (<em>str</em>) &#8211; the topic the consumer will subscribe for</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="geeteventbus.eventbus.eventbus.register_consumer_topics">
+<tt class="descname">register_consumer_topics</tt><big>(</big><em>consumer</em>, <em>topic_list</em><big>)</big><a class="reference internal" href="_modules/geeteventbus/eventbus.html#eventbus.register_consumer_topics"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geeteventbus.eventbus.eventbus.register_consumer_topics" title="Permalink to this definition">¶</a></dt>
+<dd><p>registers a consumer to the eventbus that subscribes to the list of topics in topic_list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>consumer</strong> &#8211; the subscriber object</li>
+<li><strong>topic_list</strong> &#8211; the list of topics the consumer will subscribe for</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="geeteventbus.eventbus.eventbus.shutdown">
+<tt class="descname">shutdown</tt><big>(</big><big>)</big><a class="reference internal" href="_modules/geeteventbus/eventbus.html#eventbus.shutdown"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geeteventbus.eventbus.eventbus.shutdown" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the event bus. The event bus will stop all its executor threads.
+It will try to flush out already queued events by calling the subscribers
+of the events. This flush wait time is 2 seconds.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="geeteventbus.eventbus.eventbus.unregister_consumer">
+<tt class="descname">unregister_consumer</tt><big>(</big><em>consumer</em><big>)</big><a class="reference internal" href="_modules/geeteventbus/eventbus.html#eventbus.unregister_consumer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geeteventbus.eventbus.eventbus.unregister_consumer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unregister the consumer.</p>
+<p>The consumer will no longer receieve any event to process for any topic</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>conumer</strong> &#8211; the subscriber object to unregister</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="geeteventbus.eventbus.get_crc32">
+<tt class="descclassname">geeteventbus.eventbus.</tt><tt class="descname">get_crc32</tt><big>(</big><em>data</em><big>)</big><a class="reference internal" href="_modules/geeteventbus/eventbus.html#get_crc32"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geeteventbus.eventbus.get_crc32" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the crc32 value of the input string.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-geeteventbus.subscriber">
+<span id="subscriber-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">subscriber</span></tt> Module<a class="headerlink" href="#module-geeteventbus.subscriber" title="Permalink to this headline">¶</a></h2>
+<p>Subscriber super-class</p>
+<dl class="class">
+<dt id="geeteventbus.subscriber.subscriber">
+<em class="property">class </em><tt class="descclassname">geeteventbus.subscriber.</tt><tt class="descname">subscriber</tt><a class="reference internal" href="_modules/geeteventbus/subscriber.html#subscriber"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geeteventbus.subscriber.subscriber" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="geeteventbus.subscriber.subscriber.process">
+<tt class="descname">process</tt><big>(</big><em>eventobj</em><big>)</big><a class="reference internal" href="_modules/geeteventbus/subscriber.html#subscriber.process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#geeteventbus.subscriber.subscriber.process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called by the eventbus.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>eventobj</strong> (<em>event or subclass of event</em>) &#8211; The event object</td>
+</tr>
+</tbody>
+</table>
+<p>This method implements the logic for processing the event. This method should not block for
+long time as that will affect the performance of the eventbus.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">geeteventbus Package</a><ul>
+<li><a class="reference internal" href="#module-geeteventbus.event"><tt class="docutils literal"><span class="pre">event</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-geeteventbus.eventbus"><tt class="docutils literal"><span class="pre">eventbus</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-geeteventbus.subscriber"><tt class="docutils literal"><span class="pre">subscriber</span></tt> Module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Welcome to geeteventbus&#8217;s documentation!</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/geeteventbus.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to geeteventbus’s documentation!"
+             >previous</a> |</li>
+        <li><a href="index.html">geeteventbus  documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, Author.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>

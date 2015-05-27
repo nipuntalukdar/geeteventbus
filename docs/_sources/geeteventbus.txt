@@ -1,0 +1,27 @@
+geeteventbus Package
+====================
+
+:mod:`event` Module
+-------------------
+
+.. automodule:: geeteventbus.event
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+:mod:`eventbus` Module
+----------------------
+
+.. automodule:: geeteventbus.eventbus
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+:mod:`subscriber` Module
+------------------------
+
+.. automodule:: geeteventbus.subscriber
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
