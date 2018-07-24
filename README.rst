@@ -56,10 +56,10 @@ Basic working
 
         from geeteventbus.event import event
 
-        eobj1 = ('an_important_topic', 'This is some data for the event 1')
-        eobj2 = ('an_important_topic', 'This is some data for the event 2')
-        eobj3 = ('an_important_topic', 'This is some data for the event 3')
-        eobj3 = ('an_important_topic', 'This is some data for the event 4')
+        eobj1 = event('an_important_topic', 'This is some data for the event 1')
+        eobj2 = event('an_important_topic', 'This is some data for the event 2')
+        eobj3 = event('an_important_topic', 'This is some data for the event 3')
+        eobj3 = event('an_important_topic', 'This is some data for the event 4')
     
         eb.post(eobj1)
         eb.post(eobj2)
